@@ -1,0 +1,17 @@
+**********************
+* Write Up
+**********************
+
+The PID controller is made up of three components that each affect the output
+differently. The first, proportion, allows the car to turn towards the intended
+destination. However, this section alone will cause the car to overshoot the
+target without an easy way to correct itself. The derivative portion of the
+controller corrects for this error. However, the PD alone will cause the car to
+constantly zig zag around the intended driving line. The integration portion of
+the controller completes the system and accounts for long term changes in error
+from the PD portions. This removes the zig zag.
+
+To find the weights, twiddle was used to constantly test different
+configurations of weights. Ultimately I was getting a negative value for the "I"
+portion of the controller, but inverting the sign gave me the constants I needed
+to get around the track.
