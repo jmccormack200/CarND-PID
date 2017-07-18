@@ -33,7 +33,7 @@ int main()
   uWS::Hub h;
 
   PID pid;
-  bool twiddle = true;
+  bool twiddle = false;
 
   // TODO: Initialize the pid variable.
   pid.Init(0.1891, 0.006561, 4.07109, PId);
